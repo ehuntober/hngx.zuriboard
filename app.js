@@ -26,13 +26,13 @@ app.get('/api', (req, res) => {
   }
 
 
-  const formattedUtcTime = now.toISOString().slice(0, 19) + 'Z';
+  const UtcTime = now.toISOString().slice(0, 19) + 'Z';
   
    
     const response = {
       slack_name,
       current_day: currentDay,
-      utc_time: formattedUtcTime,
+      utc_time: UtcTime,
       track,
       github_file_url: 'https://github.com/ehuntober/hngx.zuriboard/blob/master/app.js',
       github_repo_url: 'https://github.com/ehuntober/hngx.zuriboard',
